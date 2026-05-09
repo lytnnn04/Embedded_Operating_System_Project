@@ -1,6 +1,6 @@
-# Hệ Thống Báo Cháy Thông Minh (Fire Alarm System)
+# Bài tập lớn kết thúc học phần - Hệ Điều Hành Nhúng
 
-Dự án xây dựng một hệ thống báo cháy nhúng chạy trên **BeagleBone Black (AM335x)** với Linux, bao gồm các kernel driver tự viết và ứng dụng user-space đa tiến trình giao tiếp qua POSIX Shared Memory.
+Thiết kế và xây dựng một hệ thống báo cháy nhúng chạy trên **BeagleBone Black (AM335x)** với Linux, bao gồm các kernel driver tự viết và ứng dụng user-space đa tiến trình giao tiếp qua Shared Memory.
 
 ---
 
