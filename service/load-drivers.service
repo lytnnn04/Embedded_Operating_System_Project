@@ -1,0 +1,14 @@
+[Unit]
+Description=Load Custom Kernel Modules
+Before=multi-user.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/sbin/insmod /usr/lib/modules/led.ko
+ExecStart=/sbin/insmod /usr/lib/modules/dht22.ko
+ExecStart=/sbin/insmod /usr/lib/modules/adc.ko
+ExecStart=/sbin/insmod /usr/lib/modules/i2cdrv.ko
+
+[Install]
+WantedBy=multi-user.target

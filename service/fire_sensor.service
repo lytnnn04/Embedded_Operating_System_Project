@@ -1,0 +1,15 @@
+[Unit]
+Description=Fire Alarm Sensor Node
+Requires=load-drivers.service
+After=network.target load-drivers.service
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/fire_sensor
+WatchdogSec=10s         
+Restart=always
+RestartSec=2s
+NotifyAccess=main       
+
+[Install]
+WantedBy=multi-user.target

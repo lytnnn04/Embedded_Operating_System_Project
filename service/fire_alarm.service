@@ -1,0 +1,16 @@
+[Unit]
+Description=Fire Alarm Core Logic
+Requires=fire_sensor.service
+After=fire_sensor.service
+
+[Service]
+Type=notify              
+ExecStart=/usr/bin/fire_alarm
+WatchdogSec=15s         
+Restart=always
+RestartSec=2s
+NotifyAccess=main
+User=root
+
+[Install]
+WantedBy=multi-user.target

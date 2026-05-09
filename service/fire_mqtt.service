@@ -1,0 +1,15 @@
+[Unit]
+Description=Fire Alarm MQTT Cloud Gateway
+Requires=fire_sensor.service
+After=network-online.target fire_sensor.service
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/fire_mqtt
+WatchdogSec=15s
+Restart=always
+RestartSec=2s
+NotifyAccess=main
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=LCD 16x2 Display Interface
+Requires=fire_sensor.service
+After=fire_sensor.service
+
+[Service]
+Type=notify             
+ExecStart=/usr/bin/fire_lcd
+WatchdogSec=10s          
+Restart=always
+RestartSec=2s
+NotifyAccess=main
+
+[Install]
+WantedBy=multi-user.target
