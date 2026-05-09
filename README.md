@@ -37,22 +37,28 @@ Thiết kế và xây dựng một hệ thống báo cháy nhúng chạy trên *
 
 ```
 btl/
-├── app/                    # Ứng dụng user-space
-│   ├── shared_data.h       # Định nghĩa cấu trúc Shared Memory dùng chung
-│   ├── sensor_node.c       # Tiến trình đọc cảm biến & phát hiện cháy
-│   ├── alarm.c             # Tiến trình điều khiển còi/đèn báo động
-│   ├── lcd_ui.c            # Tiến trình hiển thị giao diện LCD
-│   └── mqtt.c              # Tiến trình gateway MQTT (IoT)
-├── drv/                    # Linux Kernel Drivers
-│   ├── adc_driver.c        # Character driver cho cảm biến lửa IR (ADC)
-│   ├── dht.c               # Character driver cho cảm biến nhiệt độ/độ ẩm DHT22
-│   ├── led.c               # Character driver điều khiển LED/Còi báo động
-│   └── i2cdrv.c            # Character driver I2C cho màn hình LCD 16x2
-└── exe/                    # File thực thi đã biên dịch
-    ├── fire_sensor         # Thực thi từ sensor_node.c
-    ├── fire_alarm          # Thực thi từ alarm.c
-    ├── fire_lcd            # Thực thi từ lcd_ui.c
-    └── fire_mqtt           # Thực thi từ mqtt.c
+├── app/                        # Ứng dụng user-space
+│   ├── shared_data.h           # Định nghĩa cấu trúc Shared Memory dùng chung
+│   ├── sensor_node.c           # Tiến trình đọc cảm biến & phát hiện cháy
+│   ├── alarm.c                 # Tiến trình điều khiển còi/đèn báo động
+│   ├── lcd_ui.c                # Tiến trình hiển thị giao diện LCD
+│   └── mqtt.c                  # Tiến trình gateway MQTT (IoT)
+├── drv/                        # Linux Kernel Drivers
+│   ├── adc_driver.c            # Character driver cho cảm biến lửa IR (ADC)
+│   ├── dht.c                   # Character driver cho cảm biến nhiệt độ/độ ẩm DHT22
+│   ├── led.c                   # Character driver điều khiển LED/Còi báo động
+│   └── i2cdrv.c                # Character driver I2C cho màn hình LCD 16x2
+├──service/
+|   ├── fire_alarm.service      # Dịch vụ quản lý fire_alarm
+│   ├── fire_lcd.service        # Dịch vụ quản lý fire_lcd
+│   ├── fire_sensor.service     # Dịch vụ quản lý fire_sensor
+|   ├── load-drivers.service    # Dịch vụ khởi động load drv      
+│   └── fire_mqtt.service       # Dịch vụ khởi động fire_mqtt    
+└── exe/                        
+    ├── fire_sensor             # Thực thi từ sensor_node.c
+    ├── fire_alarm              # Thực thi từ alarm.c
+    ├── fire_lcd                # Thực thi từ lcd_ui.c
+    └── fire_mqtt               # Thực thi từ mqtt.c
 ```
 
 ---
