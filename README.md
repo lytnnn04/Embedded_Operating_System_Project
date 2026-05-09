@@ -48,7 +48,7 @@ btl/
 │   ├── dht.c                   # Character driver cho cảm biến nhiệt độ/độ ẩm DHT22
 │   ├── led.c                   # Character driver điều khiển LED/Còi báo động
 │   └── i2cdrv.c                # Character driver I2C cho màn hình LCD 16x2
-├──service/
+├── service/
 |   ├── fire_alarm.service      # Dịch vụ quản lý fire_alarm
 │   ├── fire_lcd.service        # Dịch vụ quản lý fire_lcd
 │   ├── fire_sensor.service     # Dịch vụ quản lý fire_sensor
