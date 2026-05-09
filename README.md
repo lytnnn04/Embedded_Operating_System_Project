@@ -213,3 +213,8 @@ Cập nhật Shared Memory (mutex)
 | DHT22 | GPIO (1-wire) | P9_15 (GPIO1_16) |
 | LED / Buzzer | GPIO | P9_12 (GPIO1_28) |
 | LCD 16x2 (PCF8574) | I2C2 | P9_21/P9_22 |
+
+---
+
+## Phân công công việc
+<img width="1511" height="1990" alt="image" src="https://github.com/user-attachments/assets/e2b24615-1dde-40f8-af95-364cc9904e3b" />
