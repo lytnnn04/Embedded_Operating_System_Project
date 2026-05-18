@@ -216,5 +216,4 @@ Cập nhật Shared Memory (mutex)
 
 ---
 
-## Phân công công việc
-<img width="1511" height="1990" alt="image" src="https://github.com/user-attachments/assets/e2b24615-1dde-40f8-af95-364cc9904e3b" />
+
